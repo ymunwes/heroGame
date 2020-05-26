@@ -4,9 +4,8 @@
 #include <stdio.h>
 #include <string>
 #include "ActionFigure.h"
-#include "Dragon.h"
+#include "Monster.h"
 #include "Hero.h"
-#include "Orc.h"
 #include <unistd.h>
 //#include <curses.h>
 #include <ctime>
@@ -27,8 +26,8 @@ class GameManager
   {
     gameOver = false;
     hero = new Hero();
-    orc = new Orc();
-    dragon = new Dragon();
+    orc = new Monster("Orc",7,1,1300);
+    dragon = new Monster("Dragon",20,3,2600);
     dragonHitCounter = 1;
     orcHitCounter = 1;
   }

@@ -1,6 +1,6 @@
-#include "Orc.h"
+#include "Monster.h"
 
-void Orc::attack(ActionFigure* figure)
+void Monster::attack(ActionFigure* figure)
 {
   if(this->isAlive()){
     damage=this->getDamage();
@@ -9,7 +9,7 @@ void Orc::attack(ActionFigure* figure)
     figure->setHealth(figure->getHealth()-damage);
   }
 }
-bool Orc::isAlive()
+bool Monster::isAlive()
 {
   return this->health > 0;
 
